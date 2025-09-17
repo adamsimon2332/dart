@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   print("Adj meg egy számot:");
@@ -18,4 +19,9 @@ void main() {
   } else {
     print("A megadott szám a 0");
   }
+
+  bool isSquare = number >= 0 && sqrt(number).toInt() * sqrt(number).toInt() == number;
+  String square = isSquare ? "négyzetszám" : "nem négyzetszám";
+  print("A megadott szám ${square}");
 }
+
